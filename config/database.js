@@ -1,8 +1,9 @@
 // Path: ./config/env/production/database.js
 const parse = require("pg-connection-string").parse;
-const { host, port, database, user: username, password } = parse(
-  process.env.DATABASE_URL
-);
+const { host, port, database, user: username, password } = process.env
+  .DATABASE_URL
+  ? parse(process.env.DATABASE_URL)
+  : {};
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -18,9 +19,6 @@ const devConfig = (env) => ({
         database: env("DATABASE_NAME", "hg_blades_strapi"),
         username: env("DATABASE_USERNAME", "admin"),
         password: env("DATABASE_PASSWORD", "password"),
-        ssl: {
-          rejectUnauthorized: false,
-        },
       },
       options: {},
     },

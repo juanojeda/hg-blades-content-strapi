@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "pages",
   "info": {
-    "name": "Page"
+    "name": "Page",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,16 +11,16 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Content": {
+    "content": {
       "type": "richtext",
       "required": true
     },
-    "CoverImage": {
+    "coverImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,6 +30,16 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "navigationItem": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

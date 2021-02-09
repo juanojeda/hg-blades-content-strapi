@@ -4,10 +4,6 @@ const { host, port, database, user: username, password } = parse(
   process.env.DATABASE_URL
 );
 
-console.log("~~~~~~~~~~~~~~~ ENV VARS ~~~~~~~~~~~~~~~~~~~~~~~");
-console.log({ host, port, database, user: username, password });
-console.log("~~~~~~~~~~~~~~~ ENV VARS ~~~~~~~~~~~~~~~~~~~~~~~");
-
 const isProd = process.env.NODE_ENV === "production";
 
 const devConfig = (env) => ({
@@ -43,6 +39,9 @@ const prodConfig = (env) => ({
         database,
         username,
         password,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       },
       options: {},
     },

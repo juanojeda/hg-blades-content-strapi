@@ -22,10 +22,11 @@ const devConfig = (env) => ({
         database: env("DATABASE_NAME", "hg_blades_strapi"),
         username: env("DATABASE_USERNAME", "admin"),
         password: env("DATABASE_PASSWORD", "password"),
+        ssl: {
+          rejectUnauthorized: false,
+        },
       },
-      options: {
-        ssl: false,
-      },
+      options: {},
     },
   },
 });
@@ -43,9 +44,7 @@ const prodConfig = (env) => ({
         username,
         password,
       },
-      options: {
-        ssl: false,
-      },
+      options: {},
     },
   },
 });

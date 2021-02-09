@@ -41,7 +41,6 @@ const prodConfig = (env) => ({
         database,
         username,
         password,
-        ssl: true,
       },
       options: {},
     },

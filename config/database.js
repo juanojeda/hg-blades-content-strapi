@@ -5,7 +5,7 @@ const { host, port, database, user: username, password } = parse(
 );
 const isProd = process.env.NODE_ENV === "production";
 
-const devConfig = {
+const devConfig = (env) => ({
   defaultConnection: "default",
   connections: {
     default: {
@@ -22,9 +22,9 @@ const devConfig = {
       options: {},
     },
   },
-};
+});
 
-const prodConfig = {
+const prodConfig = (env) => ({
   defaultConnection: "default",
   connections: {
     default: {
@@ -41,6 +41,6 @@ const prodConfig = {
       options: {},
     },
   },
-};
+});
 
-module.exports = ({ env }) => (isProd ? prodConfig : devConfig);
+module.exports = ({ env }) => (isProd ? prodConfig(env) : devConfig(env));

@@ -1,0 +1,37 @@
+{
+  "name": "hg-blades-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Content API for HG Blades",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.4.6",
+    "strapi-admin": "3.4.6",
+    "strapi-utils": "3.4.6",
+    "strapi-plugin-content-type-builder": "3.4.6",
+    "strapi-plugin-content-manager": "3.4.6",
+    "strapi-plugin-users-permissions": "3.4.6",
+    "strapi-plugin-email": "3.4.6",
+    "strapi-plugin-upload": "3.4.6",
+    "strapi-connector-bookshelf": "3.4.6",
+    "knex": "<0.20.0",
+    "pg": "latest"
+  },
+  "author": {
+    "name": "Juan Ojeda"
+  },
+  "strapi": {
+    "uuid": "a32fc7ad-915b-4512-8e87-1431b79819f7"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": ""
+}

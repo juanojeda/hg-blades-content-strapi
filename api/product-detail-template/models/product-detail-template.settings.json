@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "product_detail_templates",
+  "info": {
+    "name": "Product Detail Template",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

@@ -520,7 +520,8 @@
           "title",
           "content",
           "slug",
-          "navigationItem"
+          "navigationItem",
+          "footerItem"
         ],
         "properties": {
           "id": {
@@ -606,6 +607,10 @@
             "type": "boolean",
             "default": false
           },
+          "footerItem": {
+            "type": "boolean",
+            "default": true
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -617,7 +622,8 @@
           "title",
           "content",
           "slug",
-          "navigationItem"
+          "navigationItem",
+          "footerItem"
         ],
         "properties": {
           "title": {
@@ -632,6 +638,10 @@
           "navigationItem": {
             "type": "boolean",
             "default": false
+          },
+          "footerItem": {
+            "type": "boolean",
+            "default": true
           },
           "published_at": {
             "type": "string",

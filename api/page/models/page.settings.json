@@ -40,6 +40,11 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "footerItem": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
